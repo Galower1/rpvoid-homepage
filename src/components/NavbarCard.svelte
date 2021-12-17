@@ -3,7 +3,7 @@
 	export let linkURL = '';
 </script>
 
-<a href={linkURL}>
+<a sveltekit:prefetch href={linkURL}>
 	<img src={image} alt={linkURL} />
 </a>
 
