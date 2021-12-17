@@ -1,7 +1,7 @@
 <script>
 	import Video from './Video.svelte';
 	import SlideImage from './SlideImage.svelte';
-	import SliderButton from './SliderButton.svelte';
+	import SliderButtonGrid from './SliderButtonGrid.svelte';
 	import Text from './Text.svelte';
 
 	export let title;
@@ -11,7 +11,7 @@
 
 	const len = slides.length;
 
-	const setIndex = (x) => (index = x);
+	const setIndex = (e) => (index = e.detail.newIndex);
 	const setWheelIndex = ({ deltaY }) => {
 		deltaY > 0 ? index++ : index--;
 
@@ -29,13 +29,7 @@
 		</div>
 		<SlideImage {slides} {index} />
 	</div>
-	<div class="slider-button-container">
-		{#if len > 1}
-			{#each slides as item, i (i)}
-				<SliderButton on:click={() => setIndex(i)} {index} id={i} />
-			{/each}
-		{/if}
-	</div>
+	<SliderButtonGrid {slides} {index} {len} on:set-index={setIndex} />
 </div>
 
 <style>
@@ -47,13 +41,5 @@
 		display: flex;
 		justify-content: center;
 		align-items: flex-end;
-	}
-
-	.slider-button-container {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		margin-top: 20px;
 	}
 </style>

@@ -34,15 +34,15 @@
 		height: 350px;
 	}
 
+	.loader img {
+		width: 150px;
+		height: 150px;
+	}
+
 	.container {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	}
-
-	.loader img {
-		width: 150px;
-		height: 150px;
 	}
 
 	.hide {
