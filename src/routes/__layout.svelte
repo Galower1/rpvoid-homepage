@@ -3,6 +3,8 @@
 	import Lazy from 'svelte-lazy';
 
 	let loaded = false;
+
+	const loadedComponent = () => (loaded = true);
 </script>
 
 <Navbar />
@@ -12,8 +14,10 @@
 		<img src="/media/ui/loadingRobot.gif" alt="loading robot" />
 	</div>
 {/if}
-<Lazy fadeOption={{ duration: 200 }} onload={() => (loaded = true)}>
-	<slot />
+<Lazy onload={() => loadedComponent()}>
+	{#if loaded}
+		<slot />
+	{/if}
 </Lazy>
 
 <style>

@@ -1,4 +1,6 @@
 <script>
+	import Lazy from 'svelte-lazy';
+
 	export let index;
 	export let slides;
 
@@ -9,7 +11,7 @@
 	$: updateText(index);
 </script>
 
-<p>{computeText}</p>
+<Lazy><p>{computeText}</p></Lazy>
 
 <style>
 	p {
