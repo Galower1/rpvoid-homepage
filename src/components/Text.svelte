@@ -16,5 +16,6 @@
 <style>
 	p {
 		text-align: center;
+		font-size: 20px;
 	}
 </style>

@@ -3,6 +3,7 @@
 	import SlideImage from './SlideImage.svelte';
 	import SliderButtonGrid from './SliderButtonGrid.svelte';
 	import Text from './Text.svelte';
+	import SlideTitle from './SlideTitle.svelte';
 
 	export let title;
 	export let slides;
@@ -21,7 +22,7 @@
 </script>
 
 <div class="slide-show" on:mousewheel={setWheelIndex}>
-	<h1>{title}</h1>
+	<SlideTitle {title} />
 	<div class="slide-container">
 		<div class="left-container">
 			<Text {slides} {index} />
@@ -33,10 +34,6 @@
 </div>
 
 <style>
-	h1 {
-		text-align: center;
-	}
-
 	.slide-container {
 		display: flex;
 		justify-content: center;
