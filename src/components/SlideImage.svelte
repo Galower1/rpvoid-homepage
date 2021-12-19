@@ -10,15 +10,15 @@
 	let backgroundTwo;
 
 	const layerOneBackgrounds = [
-		'bg_1.png',
-		'bg_2.png',
-		'bg_3.png',
-		'bg_4.png',
-		'bg_5.png',
-		'bg_6.png'
+		'bg_1.webp',
+		'bg_2.webp',
+		'bg_3.webp',
+		'bg_4.webp',
+		'bg_5.webp',
+		'bg_6.webp'
 	];
 
-	const layerTwoBackgrounds = ['pt_1.png', 'pt_2.png', 'pt_3.png', 'pt_4.png', 'pt_5.png'];
+	const layerTwoBackgrounds = ['pt_1.webp', 'pt_2.webp', 'pt_3.webp', 'pt_4.webp', 'pt_5.webp'];
 
 	const randomizeBackgrounds = (index) => {
 		backgroundOne = Math.floor(Math.random() * 6);
@@ -46,7 +46,7 @@
 		<img src="/media/backgrounds/{layer}" alt="mask" class="hide" />
 	{/each}
 
-	<Lazy>
+	<Lazy fadeOption={{ duration: 800 }}>
 		{#each slides as { imageURL }, i (i)}
 			<img
 				on:load={() => (loaded = true)}

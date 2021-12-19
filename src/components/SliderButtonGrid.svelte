@@ -12,7 +12,7 @@
 
 <div class="slider-button-container">
 	{#if len > 1}
-		{#each slides as item, i (i)}
+		{#each slides as _, i (i)}
 			<SliderButton on:click={() => dispatch('set-index', { newIndex: i })} {index} id={i} />
 		{/each}
 	{/if}

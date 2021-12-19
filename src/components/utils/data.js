@@ -33,6 +33,8 @@ export default {
 		title: 'Account',
 		slides: [
 			{
+				text: '',
+				videoURL: '',
 				imageURL: '/media/covers/cover_2b.png'
 			}
 		]

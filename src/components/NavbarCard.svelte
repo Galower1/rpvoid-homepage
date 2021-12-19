@@ -8,7 +8,7 @@
 	$: matchURL = $page.path !== linkURL;
 </script>
 
-<a sveltekit:prefetch href={linkURL}>
+<a href={linkURL}>
 	<img src={image} alt={linkURL} class:active={!matchURL} />
 </a>
 
