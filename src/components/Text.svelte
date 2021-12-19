@@ -11,10 +11,11 @@
 	$: updateText(index);
 </script>
 
-<Lazy><p>{computeText}</p></Lazy>
+<Lazy placeholder=""><p>{computeText}</p></Lazy>
 
 <style>
 	p {
 		text-align: center;
+		font-size: 20px;
 	}
 </style>
