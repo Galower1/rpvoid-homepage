@@ -4,5 +4,23 @@ body {
 	margin: 0;
 	font-family: OpenSans, sans-serif;
 	height: 100%;
-	overflow: hidden;
+	overflow-y: scroll;
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(80, 80, 80, 0.288) black;
+}
+
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: rgba(80, 80, 80, 0.288);
+	border-radius: 20px;
 }

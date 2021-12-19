@@ -1,6 +1,7 @@
 <script>
 	import Navbar from '../components/Navbar.svelte';
 	import Lazy from 'svelte-lazy';
+	import Parallax from '../components/Parallax.svelte';
 
 	let loaded = false;
 
@@ -14,9 +15,10 @@
 		<img src="/media/ui/loadingRobot.gif" alt="loading robot" />
 	</div>
 {/if}
-<Lazy onload={() => loadedComponent()}>
+<Lazy onload={loadedComponent}>
 	{#if loaded}
 		<slot />
+		<Parallax />
 	{/if}
 </Lazy>
 

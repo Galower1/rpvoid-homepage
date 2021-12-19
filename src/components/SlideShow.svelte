@@ -4,6 +4,7 @@
 	import SliderButtonGrid from './SliderButtonGrid.svelte';
 	import Text from './Text.svelte';
 	import SlideTitle from './SlideTitle.svelte';
+	import Lazy from 'svelte-lazy';
 
 	export let title;
 	export let slides;
@@ -26,7 +27,9 @@
 	<div class="slide-container">
 		<div class="left-container">
 			<Text {slides} {index} />
-			<Video {slides} {index} />
+			<Lazy>
+				<Video {slides} {index} />
+			</Lazy>
 		</div>
 		<SlideImage {slides} {index} />
 	</div>
