@@ -11,7 +11,7 @@
 	$: updateText(index);
 </script>
 
-<Lazy><p>{computeText}</p></Lazy>
+<Lazy placeholder=""><p>{computeText}</p></Lazy>
 
 <style>
 	p {
