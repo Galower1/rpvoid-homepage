@@ -4,7 +4,7 @@
 	.parallax {
 		height: 200px;
 		background-image: url('/media/backgrounds/1.png'), url('/media/backgrounds/2.png'),
-			url('/media/backgrounds/3.png'), url('media/backgrounds/4.png');
+			url('/media/backgrounds/3.png'), url('/media/backgrounds/4.png');
 		background-repeat: repeat-x, repeat-x, repeat-x, repeat-x;
 		-webkit-animation: animate-background 50s linear infinite;
 		animation: animate-background 50s linear infinite;
