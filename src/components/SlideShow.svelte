@@ -5,9 +5,11 @@
 	import Text from './Text.svelte';
 	import SlideTitle from './SlideTitle.svelte';
 	import Lazy from 'svelte-lazy';
+	import Button from './Button.svelte';
 
 	export let title;
 	export let slides;
+	export let button;
 
 	let index = 0;
 
@@ -34,6 +36,7 @@
 		<SlideImage {slides} {index} />
 	</div>
 	<SliderButtonGrid {slides} {index} {len} on:set-index={setIndex} />
+	<Button {...button} />
 </div>
 
 <style>

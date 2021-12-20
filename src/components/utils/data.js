@@ -27,7 +27,11 @@ export default {
 				videoURL: '/media/videos/5.webm',
 				imageURL: '/media/covers/cover_8b.png'
 			}
-		]
+		],
+		button: {
+			buttonText: 'PLAY',
+			redirect: '/account'
+		}
 	},
 	account: {
 		title: 'Account',
@@ -37,7 +41,11 @@ export default {
 				videoURL: '',
 				imageURL: '/media/covers/cover_2b.png'
 			}
-		]
+		],
+		button: {
+			buttonText: 'LOGIN',
+			type: 'submit'
+		}
 	},
 	key: {
 		title: 'Key',
@@ -47,7 +55,10 @@ export default {
 				videoURL: '/media/videos/3.webm',
 				imageURL: '/media/covers/cover_3b.png'
 			}
-		]
+		],
+		button: {
+			buttonText: 'KEY'
+		}
 	},
 	patreon: {
 		title: 'Patreon',
@@ -57,7 +68,11 @@ export default {
 				videoURL: '/media/videos/12_OP.webm',
 				imageURL: '/media/covers/cover_5b.png'
 			}
-		]
+		],
+		button: {
+			buttonText: 'SUPPORT',
+			redirect: 'https://www.patreon.com/RpVoid'
+		}
 	},
 	discord: {
 		title: 'Discord',
@@ -67,6 +82,10 @@ export default {
 				videoURL: '/media/videos/11_OP.webm',
 				imageURL: '/media/covers/cover_4b.png'
 			}
-		]
+		],
+		button: {
+			buttonText: 'DISCORD',
+			redirect: 'https://discord.com/invite/a2EwYmj'
+		}
 	}
 };
